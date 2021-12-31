@@ -1,11 +1,11 @@
 #include<iostream>
-#define SIZE 10
+#define SIZE 10        
 using namespace std;
-int hashval(int key)
+int hashval(int key)    // function to give the index at which the key is to be stored in the hash table.
 {
     return key%SIZE;
 }
-int probe(int H[],int key)
+int probe(int H[],int key)  // function to give the index to the first vacant space starting from the index given by hash function.
 {
     int index=hashval(key);
     int i=0;
@@ -15,7 +15,7 @@ int probe(int H[],int key)
     }
     return (index+i)%SIZE;
 }
-void insert(int H[],int key)
+void insert(int H[],int key)  // function to store a given key in the given hash table.
 {
    int index=hashval(key);
    if(H[index]==0)
@@ -28,7 +28,7 @@ void insert(int H[],int key)
      H[index]=key;
    }
 }
-int Search(int H[],int key)
+int Search(int H[],int key)  // function to return the index of the given key in the given hash table.
 {
     int index=hashval(key);
     int i=0;
@@ -44,16 +44,19 @@ int Search(int H[],int key)
 }
 int main()
 {
-    int HT[SIZE]={0};
+    int HT[SIZE]={0};   // Creating hash table.
+    // Inserting keys in the hash table.
     insert(HT,5);
     insert(HT,25);
     insert(HT,35);
     insert(HT,2);
     insert(HT,12);
+    // Printing the hash table.
     for(int i=0;i<SIZE;i++)
     {
         cout<<i<<" : "<<HT[i]<<endl;
     }
+    // Searching a key in the hash table.
     int key=21;
     if(Search(HT,key)==-1)
     {
