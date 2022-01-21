@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 void _union(int set[],int u,int v)        // funtion to do union of set u and set v.
-{
+{                                         // Time:O(1)
    if(set[u]<set[v])
    {
        set[u]+=set[v];
@@ -14,7 +14,7 @@ void _union(int set[],int u,int v)        // funtion to do union of set u and se
    }
 }
 int find(int set[],int u)     // funtion to find the parent of the given element.
-{
+{                             //O(log(n))
     int x=u;
     while(set[x]>0)
     {
@@ -27,7 +27,7 @@ void min_cost_spanning_tree(int edges[][9],int n,int e)      // funtion to print
    int set[8]={-1,-1,-1,-1,-1,-1,-1,-1};                     // array to implement set operations.
    int included[e]={0};                                      // array to mark a visited edge.
    int mcst[2][n-1];                                         // array to store the edges of minimum cost spanning tree.
-   int i=0;
+   int i=0;                                                  // Time:O(n^2)
    while(i<n-1)
    {
        int k;
