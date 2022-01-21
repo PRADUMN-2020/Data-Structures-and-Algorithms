@@ -5,7 +5,7 @@ int hashval(int key)    // function to give the index at which the key is to be 
 {
     return key%SIZE;
 }
-int double_hash(int H[],int key)  // function to give the index to the first vacant space according to the  double hashing hash function h`(x)=(h1(x)+i*h2(x))%SIZE where i=0,1,2......, here h1(x)=x%SIZE and h2(x)= R-(x%R), here R is the just smaller prime no of the size.
+int double_hash(int H[],int key)  // function to give the index to the first vacant space according to the  double hashing hash function h`(x)=(h1(x)+i*h2(x))%SIZE where i=0,1,2......, here h1(x)=x%SIZE and h2(x)= R-(x%R), here R is the just smaller prime no than the size.
 {
     int h1=hashval(key);
     int h2=7-(key%7);
