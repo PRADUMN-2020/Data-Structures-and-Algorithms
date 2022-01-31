@@ -23,7 +23,7 @@ int main()
                      {0,5,inf,0,1},
                      {0,2,inf,inf,0},
                        };
-    floyd(graph,4);
+    floyd(graph,4);          // After calling floyd's algorithm the adjacency matrix will be updated with the min cost to reach from i to j at index i, j.
     for(int i=1;i<5;i++)
     {
         for(int j=1;j<5;j++)
