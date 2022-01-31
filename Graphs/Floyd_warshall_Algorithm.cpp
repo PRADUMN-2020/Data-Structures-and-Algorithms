@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define inf 100000
-void floyd(int graph[][5],int n)
+void floyd(int graph[][5],int n)   // Time:O(n^3) where n is the no of vertices of the given.
 {
   for(int k=1;k<=n;k++)
   {
