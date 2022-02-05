@@ -13,23 +13,23 @@ void dijkstra(vector<int>&visited,vector<int>&dist,vector<pair<int,int>>cal[],in
   {
       int mn=INT_MAX;
       int k=-1;
-      for(int i=1;i<=n;i++)
+      for(int j=1;j<=n;j++)
       {
-          if(visited[i]==0)
+          if(visited[j]==0)
           {
-            if(mn>dist[i])
+            if(mn>dist[j])
             {
-                mn=dist[i];
-                k=i;
+                mn=dist[j];
+                k=j;
             }
           }
       }
       visited[k]=1;
-      for(int i=0;i<cal[k].size();i++)
+      for(int j=0;j<cal[k].size();j++)
       {
-          if(visited[cal[k][i].first]==0)
+          if(visited[cal[k][j].first]==0)
           {
-              dist[cal[k][i].first]=min(dist[cal[k][i].first],mn+cal[k][i].second);
+              dist[cal[k][j].first]=min(dist[cal[k][j].first],mn+cal[k][j].second);
           }
       }
   }
