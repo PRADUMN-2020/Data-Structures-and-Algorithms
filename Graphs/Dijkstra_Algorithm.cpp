@@ -34,6 +34,41 @@ void dijkstra(vector<int>&visited,vector<int>&dist,vector<pair<int,int>>cal[],in
       }
   }
 }
+// for optimized dijkstra using set see leetcode 1514 solution. T=O(e*log(n))
+/*
+Code for dijkstra using set.
+
+Link:https://leetcode.com/problems/path-with-maximum-probability/discuss/732293/Dijkstra's-algorithm-implementation-C%2B%2B
+
+
+void setList(vector<vector<pair<int, int>>>& graph, int src) {
+        // graph: each pair<int, int> is <node, weight>
+        int n = graph.size();
+        vector<int> dist(n, INT_MAX);
+        dist[src] = 0;
+        set<pair<int, int>> unfinalized;  // <distance, node>
+        for (int node = 0; node < n; node++)
+            unfinalized.insert({node == src ? 0 : INT_MAX, node});
+
+        while (!unfinalized.empty()) {
+            pair<int, int> p = *(unfinalized.begin());
+            unfinalized.erase(unfinalized.begin());
+            int u = p.second;
+
+            for (int i = 0; i < graph[u].size(); i++) {
+                int v = graph[u][i].first, weight = graph[u][i].second;
+                if (dist[u] + weight < dist[v]) {
+                    // v cannot be finalized, so must be in finalized
+                    unfinalized.erase(unfinalized.find({dist[v], v}));
+                    dist[v] = dist[u] + weight;
+                    unfinalized.insert({dist[v], v});
+                }
+            }
+        }
+
+        printSolution(dist);
+    }
+*/
 int main()
 {
     vector<pair<int,int>>cal[7];  // Initialising cost adjacency list. 
