@@ -3,6 +3,7 @@
 using namespace std;
 void BFS(vector<int>al[],int i,int n)         //Funtion to print bfs traversal of a given graph in the form of adjacency list.
 {                                             // Time:O(n+e) where n is no of vertices and e is no of edges.
+                                              // Space:O(n) for queue, O(n) for Visited array.
     int visited[n+1]={0};
     queue<int>q;
     cout<<i<<" ";
