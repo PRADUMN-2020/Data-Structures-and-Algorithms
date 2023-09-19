@@ -5,6 +5,7 @@ using namespace std;
 vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
         // Time:O(e*log(v)) where e is no of edges and v is no of vertices.
+        // Limitations: Dont work for negative edges.
 
         priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
         vector<int>dist(V,1e9);
