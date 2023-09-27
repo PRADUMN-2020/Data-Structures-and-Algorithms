@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
   public:
     /*  Function to implement Bellman Ford
-    *   edges: vector of vectors which represents the graph
+    *   edges: vector of vectors which represents all the edges of the graph. Each directed edge is represented as a vector of size 3 as follows: if u->v has a cost wt then 0th element is u 1st element is v and 2nd element is wt.
     *   S: source vertex to start traversing graph with
     *   V: number of vertices
     */
