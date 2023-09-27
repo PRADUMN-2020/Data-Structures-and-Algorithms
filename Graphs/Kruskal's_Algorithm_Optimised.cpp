@@ -6,7 +6,10 @@ using namespace std;
 class Solution
 {
 	public:
-	//Function to find sum of weights of edges of the Minimum Spanning Tree.
+
+	// Kruskals algorithm gives the min cost spanning tree's total cost and the tree edges for a connected or a disconnected graph this algo is robust to handle both (this is best to find a mst and I prefer this).
+
+         // Advantage: Unlike Prim's algorithm which fails for a disconnected graph it also works for a disconnected graph and in case of a disconnected graph it gives the mst's for each of the components and a sum of all the mst costs.
 	
 	// Main Idea: The idea of Kruskal's algorithm is to first sort all the edges according to their edge weights ascending order and then iterate on them and see if for a perticular edge make by u and v is there a connection between u and v vertices (using find function of disjoint set to check if the both have same parents then they have a connection), if there is a connection we cant add this edge in mst because if we do so the there will be cycle formed so we leave it else if they have no connection we simply add it to the mst.
 	

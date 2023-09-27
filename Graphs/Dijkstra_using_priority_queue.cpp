@@ -5,7 +5,8 @@ using namespace std;
 vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
         // Time:O(e*log(v)) where e is no of edges and v is no of vertices.
-        // Limitations: Dont work for negative edge weights. Then we use Bellman Ford Algorithm.
+        // A negative wt cycle is a cycle in a graph having path sum as -ve.
+        // Limitations: Dont work for negative edge weights and also gives TLE for negative wt cycle or loop as it gets into an infinite loop. Then we use Bellman Ford Algorithm as it works for -ve weights and also helps to detect negative cycle.
 
         priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
         vector<int>dist(V,1e9);
