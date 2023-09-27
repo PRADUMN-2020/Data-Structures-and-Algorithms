@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define inf 1e9
+
+ // Floyd Warshall is based on DP. It can help detect negative cycles as if any of the i,i in the cost adjacently matrix is -ve then the graph contains negavtive cycle and then shortest path will of of no sence. Dijkstra cant detect negative cycle because it will run into infinite loop in case of negative cycle.
+	
+
 void floyd(int graph[][5],int n)   // Time:O(n^3) where n is the no of vertices of the given.
 {
   for(int k=1;k<=n;k++)
