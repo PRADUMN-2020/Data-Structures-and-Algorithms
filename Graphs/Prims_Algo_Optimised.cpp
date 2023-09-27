@@ -9,7 +9,7 @@ class Solution
 	
 	// Main Idea: It is a greedy approach. The main idea of the algorithm is the start from any vertex and the find the min cost vertex in its sourrounding and select that then take the min cost vertex from all the vertices which are  adjacent to the selected till now and repeat this process until all n-1 edges are taken.
 
-    // Time:O(Elog(E));
+    // Time:O(Elog(E)) or O(Elog(V))
     // Space:O(E)
 	
     int spanningTree(int V, vector<vector<int>> adj[])//Function to find sum of weights of edges and also the edges of the Minimum Spanning Tree.
