@@ -28,7 +28,7 @@ class Solution {
     
    /* 1) Why n-1 iterations of relaxations.
     
-    There are n-1 relaxations because since in a graph of n nodes, in worst case, you will take n-1 edges at reach from the first to
+    There are n-1 relaxations because since in a graph of n nodes, in worst case, you will take n-1 edges to reach from the first to
     the last thereby we iterate for n-1 iterations. Try drawing a graph which takes more than n-1 edges for a path its not possible.
     
     2) How to detect -ve cycle?
